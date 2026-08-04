@@ -35,7 +35,7 @@
   .brand { display:flex; align-items:center; gap:12px; }
   .brand .who { font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); }
   .portrait { position:relative; display:block; width:152px; margin:0 auto 22px; }
-  .hero-avatar {
+  .profile-avatar {
     display:block;
     width:152px; height:152px; border-radius:50%; object-fit:cover;
     border:3px solid rgba(255,255,255,0.16);
@@ -65,7 +65,7 @@
   .topnav a:hover { color:var(--ink); }
   .topnav a:hover::after { transform:scaleX(1); }
 
-  .hero { text-align:center; padding: 30px 0 0; }
+  .profile { text-align:center; padding: 30px 0 0; }
   .hi {
     font-family:"Sora", sans-serif;
     font-weight:800;
@@ -344,12 +344,12 @@
 
   footer { text-align:center; margin-top:70px; font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint); }
 
-  .hero-avatar, .hi, .fan, .tagline, .cta-row { opacity:0; transform:translateY(14px); animation:rise 720ms cubic-bezier(0.16,0.7,0.2,1) forwards; }
-  .hero-avatar { animation-delay:0ms; } .hi { animation-delay:80ms; } .fan { animation-delay:200ms; } .tagline { animation-delay:340ms; } .cta-row { animation-delay:440ms; }
+  .profile-avatar, .hi, .fan, .tagline, .cta-row { opacity:0; transform:translateY(14px); animation:rise 720ms cubic-bezier(0.16,0.7,0.2,1) forwards; }
+  .profile-avatar { animation-delay:0ms; } .hi { animation-delay:80ms; } .fan { animation-delay:200ms; } .tagline { animation-delay:340ms; } .cta-row { animation-delay:440ms; }
   @keyframes rise { to { opacity:1; transform:translateY(0);} }
 
   @media (prefers-reduced-motion: reduce) {
-    .hero-avatar,.hi,.fan,.tagline,.cta-row { animation:none; opacity:1; transform:none; }
+    .profile-avatar,.hi,.fan,.tagline,.cta-row { animation:none; opacity:1; transform:none; }
     .tile { transition:none; }
     .tile:hover, .tile:hover .face::before, .tile:hover::before, .tile:hover::after, .tile:hover .spark::before, .tile:hover .spark::after, .tile:hover .spark i, .cta:hover, .cta:hover .glint::before, .cta:hover .spark::before, .cta:hover .spark::after, .cta:hover .spark i, .portrait:hover::before, .portrait:hover::after, .portrait:hover .spark::before, .portrait:hover .spark::after, .portrait:hover .spark i { animation:none; }
   }
